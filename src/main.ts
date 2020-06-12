@@ -5,6 +5,10 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+// import VueElectron from 'vue-electron';
+
+// Vue.use(VueElectron);
+
 new Vue({
   router,
   store,
