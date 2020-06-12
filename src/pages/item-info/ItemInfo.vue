@@ -16,7 +16,7 @@ export default Vue.extend({
         }
     },
     created() {
-        //console.log(this.$electron.remote);
+        console.log(this.$electron.remote);
         // this.$electron.clipboard.writeText("a");
         // //this.item = clipboard.readText();
         // console.log(this.item);
