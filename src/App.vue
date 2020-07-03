@@ -1,12 +1,32 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/itemInfo">About</router-link>
+      <!-- <router-link to="/">
+        Home
+      </router-link> |
+      <router-link to="/itemInfo">
+        Item Info
+      </router-link>
+      <router-link to="/video">
+        Video
+      </router-link> -->
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  created() {
+    console.log(this.$electron);
+  },
+  async mounted() {
+
+  }
+});
+</script>
 
 <style lang="scss">
 #app {

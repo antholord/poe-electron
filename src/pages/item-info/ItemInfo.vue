@@ -1,27 +1,22 @@
 <template>
   <div>
-    <h1>{{ item }}</h1>a
+    <h1>{{ item }}</h1>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-//const { remote } = require('electron');
-
+import Vue from 'vue';
 export default Vue.extend({
-    data() {
-        return {
-            item: null as any
-        }
-    },
-    created() {
-        console.log(this.$electron.remote);
-        // this.$electron.clipboard.writeText("a");
-        // //this.item = clipboard.readText();
-        // console.log(this.item);
-    }
-})
+  data() {
+    return {
+      item: null as any
+    };
+  },
+  created() {
+    console.log('created iteminfo');
+    this.item = this.$electron.clipboard.readText();
+  }
+});
 </script>
 
 <style>

@@ -1,11 +1,13 @@
+
 import Vue from 'vue';
+import * as Electron from 'electron';
+
 declare module '*.vue' {
-  import Vue from 'vue'
-  export default Vue
+  export default Vue;
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
-      $electron: any
+    $electron: typeof Electron
   }
 }
